@@ -1,0 +1,25 @@
+--Lab2 Group 3 CEG3155
+--Jessica Hemstead 300214909
+--Alexander Wilson 300219585
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY bit4reg IS
+	PORT(
+		i_select:IN STD_LOGIC_VECTOR(0 to 1);
+		i_R0:IN STD_LOGIC_VECTOR(0 to 7);
+		i_R1:IN STD_LOGIC_VECTOR(0 to 7);
+		i_R2:IN STD_LOGIC_VECTOR(0 to 7);
+		i_R3:IN STD_LOGIC_VECTOR(0 to 7);
+		o_s: OUT STD_LOGIC_VECTOR(0 to 7));
+END bit4reg;
+
+Architecture bit4reg_a OF bit4reg IS
+
+	SIGNAL int_opt: STD_LOGIC_VECTOR(0 to 3);
+	
+
+BEGIN
+
+END bit4reg_a;

@@ -1,0 +1,22 @@
+--Lab1 Group 3 CEG3155
+--Jessica Hemstead 300214909
+--Alexander Wilson 300219585
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY multiply IS
+	PORT(
+		i_a:IN STD_LOGIC_VECTOR(0 to 3);
+		i_b:IN STD_LOGIC_VECTOR(0 to 3);
+		
+		o_product: OUT STD_LOGIC_VECTOR(0 to 7));
+END multiply;
+
+Architecture multiply_a OF multiply IS
+
+
+
+
+
+END multiply_a;

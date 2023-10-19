@@ -1,0 +1,29 @@
+--Lab2 Group 3 CEG3155
+--Jessica Hemstead 300214909
+--Alexander Wilson 300219585
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY myALU IS
+	PORT(
+		i_a:IN STD_LOGIC_VECTOR(0 to 3);
+		i_b:IN STD_LOGIC_VECTOR(0 to 3);
+		i_opSel: IN STD_LOGIC;
+		o_add: OUT STD_LOGIC_VECTOR(0 to 7));
+		o_sub: OUT STD_LOGIC_VECTOR(0 to 7));
+		o_mult: OUT STD_LOGIC_VECTOR(0 to 7));
+		o_div: OUT STD_LOGIC_VECTOR(0 to 7));
+END myALU;
+
+Architecture myALU_a OF myALU IS
+
+	
+
+Begin
+
+
+	
+	
+END myALU_a;
+

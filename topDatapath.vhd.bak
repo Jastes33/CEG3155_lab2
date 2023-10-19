@@ -1,0 +1,31 @@
+--Lab2 Group 3 CEG3155
+--Jessica Hemstead 300214909
+--Alexander Wilson 300219585
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY topDatapath IS
+	PORT(
+		i_in1:IN STD_LOGIC_VECTOR(0 to 7);
+		i_in2:IN STD_LOGIC_VECTOR(0 to 7);
+		i_select:IN STD_LOGIC;
+		o_muxOUT: OUT STD_LOGIC_VECTOR(0 to 7));
+END topDatapath;
+
+Architecture topDatapath_a OF topDatapath IS
+	
+	component my2to1
+		PORT(
+		i_op0:IN STD_LOGIC;
+		i_op1:IN STD_LOGIC;
+		i_selection: IN STD_LOGIC;
+		o_choice:OUT STD_LOGIC);
+	END component;
+	
+BEGIN
+
+
+
+
+END topDatapath_a;

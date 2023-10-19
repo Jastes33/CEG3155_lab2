@@ -1,0 +1,17 @@
+--Lab2 CEG3155 Group 3
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY halfADD IS
+	PORT(
+	i_a, i_b : IN STD_logic;
+	o_s, o_c :OUT STD_logic);
+END halfADD;
+
+Architecture rtl of halfADD IS
+
+BEGIN
+	o_s <= (i_a xor i_b);
+	o_c <= (i_a and i_b);
+	
+END rtl; 

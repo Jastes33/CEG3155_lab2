@@ -1,0 +1,95 @@
+--Lab2 Group 3 CEG3155
+--Jessica Hemstead 300214909
+--Alexander Wilson 300219585
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY mux2choice8bit IS
+	PORT(
+		i_in1:IN STD_LOGIC_VECTOR(0 to 7);
+		i_in2:IN STD_LOGIC_VECTOR(0 to 7);
+		i_select:IN STD_LOGIC;
+		o_muxOUT: OUT STD_LOGIC_VECTOR(0 to 7));
+END mux2choice8bit;
+
+Architecture mux2choice8bit_a OF mux2choice8bit IS
+	
+	component my2to1
+		PORT(
+		i_op0:IN STD_LOGIC;
+		i_op1:IN STD_LOGIC;
+		i_selection: IN STD_LOGIC;
+		o_choice:OUT STD_LOGIC);
+	END component;
+	
+BEGIN
+
+    amux : my2to1
+	 PORT MAP(
+		i_op0 => i_in1(0),
+		i_op1 => i_in2(0),
+		i_selection => i_select,
+		o_choice => o_muxOUT(0)
+	 );
+	 
+	 bmux : my2to1
+	 PORT MAP(
+		i_op0 => i_in1(1),
+		i_op1 => i_in2(1),
+		i_selection => i_select,
+		o_choice => o_muxOUT(1)
+	 );
+	 
+	 cmux : my2to1
+	 PORT MAP(
+		i_op0 => i_in1(2),
+		i_op1 => i_in2(2),
+		i_selection => i_select,
+		o_choice => o_muxOUT(2)
+	 );
+	 
+	 dmux : my2to1
+	 PORT MAP(
+		i_op0 => i_in1(3),
+		i_op1 => i_in2(3),
+		i_selection => i_select,
+		o_choice => o_muxOUT(3)
+	 );
+	 
+	 emux : my2to1
+	 PORT MAP(
+		i_op0 => i_in1(4),
+		i_op1 => i_in2(4),
+		i_selection => i_select,
+		o_choice => o_muxOUT(4)
+	 );
+	 
+	 fmux : my2to1
+	 PORT MAP(
+		i_op0 => i_in1(5),
+		i_op1 => i_in2(5),
+		i_selection => i_select,
+		o_choice => o_muxOUT(5)
+	 );
+	 
+	 gmux : my2to1
+	 PORT MAP(
+		i_op0 => i_in1(6),
+		i_op1 => i_in2(6),
+		i_selection => i_select,
+		o_choice => o_muxOUT(6)
+	 );
+	 
+	 hmux : my2to1
+	 PORT MAP(
+		i_op0 => i_in1(7),
+		i_op1 => i_in2(7),
+		i_selection => i_select,
+		o_choice => o_muxOUT(7)
+	 );
+	 
+
+END mux2choice8bit_a;
+	
+	

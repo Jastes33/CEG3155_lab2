@@ -1,0 +1,43 @@
+--Lab2 CEG3155 Group 3
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY full8bitADD IS
+	PORT(
+	i_xx, i_yy : IN STD_logic_vector(0 to 7);
+	i_cin :IN STD_logic;
+	o_sum:OUT STD_logic_vector(0 to 7));
+	o_cout:OUT STD_logic;
+END full8bitADD;
+
+Architecture rtl of full8bitADD IS
+
+	SIGNAL int_c :STD_logic_vector(0 to 7);
+
+	component fullADD
+		PORT(
+		i_x, i_y, i_cin : IN STD_logic;
+		o_sum, o_cout :OUT STD_logic);
+	END component;
+
+BEGIN
+	aFulladd : fullADD
+	PORT MAP(
+	i_a => i_x,
+	i_b => i_y,
+	o_s => int_s,
+	o_c => int_c
+	);
+	
+	secondHalfadd : halfAdd
+	PORT MAP(
+	i_a => i_cin,
+	i_b => int_s,
+	o_s => o_sum,
+	o_c => int_c2
+	);
+	
+	o_cout <= (int_c or int_c2);
+	
+END rtl;
+	
